@@ -1,19 +1,22 @@
 // ==UserScript==
-// @name         NEW QXC3
+// @name         NEW QXC4
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
 // @match        http://*/*
+// @run-at      document-end
+// @require     https://raw.github.com/borisCai/javascripSourse/master/qxc2.js
 // @grant        none
 // ==/UserScript==
 
 (function() {
     'use strict';
 
-   // var d = new Date('2018-01-24');
+
+    var d = new Date(redate("aa1"));
     //http://tool.chinaz.com/tools/jscodeconfusion.aspx
-    var d = new window["\x44\x61\x74\x65"]('\x32\x30\x31\x38\x2d\x30\x31\x2d\x32\x34');
+   // var d = new window["\x44\x61\x74\x65"]('\x32\x30\x31\x38\x2d\x30\x31\x2d\x32\x34');
     //求自然月日期
     function getMonthBeforeFormatAndDay(num, format, day) {
         var date =  d;
@@ -100,7 +103,7 @@
       var tb = document.getElementById("tbody2");
     if(tb !=null){
      $.each(tb.children,function(e){
-           var hs=0.01;//四定位，头奖赔率
+           var hs=0.04;//四定位，头奖赔率
     var that=this;
         var pv= that.cells[1].innerText.split(':')[1];
            var last_pv=pv*(1-hs);
